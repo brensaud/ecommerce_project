@@ -3,6 +3,10 @@
 
 {% block title %} Home Page Template {% endblock title %}
 
+{% block custom_css %} 
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock custom_css %}
+
 {% block content %}
     <h1>Hello World</h1>
     <h2>{{title}}</h2>

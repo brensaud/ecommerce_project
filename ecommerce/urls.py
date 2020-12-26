@@ -16,11 +16,11 @@ from .views import (home_page,
 
 urlpatterns = [
     path('', home_page, name='home'),
-    path('contact/', contact_page, name='home'),
-    path('about/', about_page, name='home'),
+    path('contact/', contact_page, name='contact'),
+    path('about/', about_page, name='about'),
     path('login/', login_page, name='login'),
     path('register/', register_page, name='register'),
-    path('products/', include('products.urls')),
+    path('products/', include(('products.urls', 'products'), namespace='products')),
     path('admin/', admin.site.urls),
 ]
 

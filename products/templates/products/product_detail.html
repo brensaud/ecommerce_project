@@ -1,6 +1,20 @@
-{{object.id}}
-{{object}}
-{{object.title}}
-{{object.price}}
-{{object.description}}
-<img src="{{object.image.url}}" class="img-fluid" alt="" height="100px" width="100px">
+{% extends 'base.html' %}
+
+{% block title %} Prodcut Detail Page {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {{ object.id }}
+                {{ object }}
+                {{ object.title|title }}
+                {{ object.timestamp|timesince }} ago
+                {{ object.price }}
+                {{ object.description|linebreaks }}
+
+                <img src="{{object.image.url}}" class="img-fluid" alt="" height="100px" width="100px">
+            </div>
+        </div>
+    </div>
+{% endblock content 5}

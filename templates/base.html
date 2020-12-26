@@ -7,11 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block title %}{% endblock title %}
 
+    {% include 'partials/_css.html' %}
+    
+    {% block custom_css %} {% endblock custom_css %}
 </head>
 
 <body>
+    {% include 'partials/_navbar.html' with brand_name='Ecommerce' %}
 
     {% block content %}{% endblock content %}
+
+    {% include 'partials/_js.html' %} 
 
 </body>
 
