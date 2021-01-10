@@ -6,7 +6,7 @@ from products.models import Product
 #class based generics views
 class SearchProductListView(ListView):
     queryset = Product.objects.all()
-    template_name = 'products/product_list.html'
+    template_name = 'search/view.html'
 
     # def get_context_data(self, *args, **kwargs):
     #     context = super(ProductListView, self).get_context_data(*args, **kwargs)
